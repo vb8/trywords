@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="product-info">
+            <h1>{{ product }}</h1>
+            <p>{{ description }}</p>
+            <h1>{{ myarray[1] + myarray[0]}}</h1>
+            <ul>
+                <li v-for="item in myarray">{{item }} </br>
+                </li>
+            </ul>
+
+
+            <div v-for="variant in variants" :key="variant.variantId">
+                <p>{{ variant.word + variant.wordE }}</p>
+            </div>
+
+            <form> nen 2</form>
+            <button v-on:click="cart +=1 ">cart=cart+1</button>
+            <button @click="removeFromCart">Remove from cart</button>
+            <button v-on:click="this.cart=this.cart+1">this.cart</button>
+            <button onclick="this.innerHTML = Date()">The time is?</button>
+            <button onclick="removeFromCart()">The time is?</button>
+            <div id="mywords">this.cart222</div>
+
+            <div id="app" class="grid-container">
+                <div class="grid-item">{{ product }}</div>
+                <div class="grid-item">{{ this.cart }}</div>
+                <div class="grid-item">{{ cart }}</div>
+                <div class="grid-item">{{ description }}</div>
+                <div class="grid-item">{{ this.cart }}</div>
+                <div id='my2' class="grid-item">1</div>
+                <div class="grid-item">7</div>
+                <div class="grid-item">8</div>
+                <div class="grid-item">9</div>
+                <button v-on:click="cart += 1">{{cart}} cart</button>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+        <script src="main.js">
+        </script>
+
+</body>
